@@ -1,4 +1,4 @@
-echo '<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -8,12 +8,46 @@ echo '<!DOCTYPE html>
     <link rel="stylesheet" href="css_basic/styles.css">
 </head>
 <body>
-    <header>
-        <h1>Welcome to My Project</h1>
+    <header class="main-header">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="tweets.html">Tweets</a></li>
+            </ul>
+        </nav>
+        <h1>Welcome to My Learning Journey</h1>
     </header>
-    <main>
-        <p>This is the homepage.</p>
-        <a href="tweets.html">View Tweets</a>
+
+    <main class="container">
+        <article>
+            <h2>About This Project</h2>
+            <p>This is my first ALX HTML/CSS project where I'm mastering web fundamentals.</p>
+            
+            <section class="features">
+                <h3>Key Features:</h3>
+                <ul>
+                    <li>Semantic HTML5</li>
+                    <li>Responsive Design</li>
+                    <li>Clean CSS Architecture</li>
+                </ul>
+            </section>
+
+            <div class="cta">
+                <a href="tweets.html" class="btn">See My Tweets</a>
+            </div>
+        </article>
+
+        <aside class="sidebar">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="#">ALX Program</a></li>
+                <li><a href="#">HTML Resources</a></li>
+            </ul>
+        </aside>
     </main>
+
+    <footer class="main-footer">
+        <p>Made with ♥ by Asanda for <a href="https://alxafrica.com" target="_blank">ALX Africa</a></p>
+    </footer>
 </body>
-</html>' > index.html
+</html>
