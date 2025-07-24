@@ -119,7 +119,11 @@ h2 {
     .container {
         grid-template-columns: 1fr;
     }
-    
+    @media screen and (max-width: 768px) {
+  .works_on_smartphone {
+    /* responsive styles here */
+  }
+}
     h1 {
         font-size: 2rem;
     }
