@@ -124,3 +124,41 @@ h2 {
         font-size: 2rem;
     }
 }
+/* Flex Containers */
+body, main {
+  display: flex;
+}
+
+/* Body: Vertical Stack (Header → Main → Footer) */
+body {
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+}
+
+/* Main: Horizontal Layout (Article + Aside) */
+main {
+  flex-direction: row;
+  flex: auto;
+}
+
+/* Article (2/3 width) + Aside (1/3 width) */
+article {
+  flex: 2;
+  overflow-y: auto;
+}
+
+aside {
+  flex: 1;
+  overflow-y: auto;
+}
+
+/* Optional Styling */
+header, footer {
+  padding: 1rem;
+  background: #f0f0f0;
+}
+
+article, aside {
+  padding: 1rem;
+}
