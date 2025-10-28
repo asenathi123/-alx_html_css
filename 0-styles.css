@@ -1,0 +1,176 @@
+/* CSS Reset & Variables */
+:root {
+    --color-primary: #FF6565;
+    --color-white: #FFFFFF;
+    --color-black: #071629;
+    --color-gray: #979797;
+    --font-primary: 'Source Sans Pro', sans-serif;
+    --container-max-width: 1000px;
+    --border-radius: 22px;
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-primary);
+    line-height: 1.6;
+    color: var(--color-white);
+    overflow-x: hidden;
+}
+
+/* Container */
+.container {
+    max-width: var(--container-max-width);
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 28px 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar__logo img {
+    display: block;
+}
+
+.navbar__menu {
+    display: flex;
+    list-style: none;
+    gap: 41px;
+}
+
+.navbar__link {
+    text-decoration: none;
+    color: var(--color-white);
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: lowercase;
+    transition: var(--transition);
+}
+
+.navbar__link:hover,
+.navbar__link:active {
+    color: var(--color-primary);
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(rgba(7, 22, 41, 0.9), rgba(7, 22, 41, 0.9)), 
+                url('assets/images/headphones_hero_1.jpg') no-repeat center center;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding: 120px 0 80px;
+}
+
+.hero__content {
+    max-width: 637px;
+    margin: 0 auto;
+}
+
+.hero__title {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 0;
+}
+
+.hero__subtitle {
+    font-size: 16px;
+    font-weight: 700;
+    margin: 0 0 40px 0;
+}
+
+.btn {
+    border: none;
+    border-radius: var(--border-radius);
+    padding: 13px 31px;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: var(--transition);
+    font-family: inherit;
+}
+
+.btn--primary {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    margin-bottom: 65px;
+}
+
+.btn--primary:hover,
+.btn--primary:active {
+    opacity: 0.9;
+}
+
+.hero__description {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.6;
+    max-width: 637px;
+    margin: 0 auto;
+}
+
+/* Mobile Styles */
+@media (max-width: 480px) {
+    .container {
+        padding: 0 25px;
+    }
+
+    .navbar {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .navbar__menu {
+        gap: 20px;
+    }
+
+    .hero__title {
+        font-size: 28px;
+    }
+
+    .hero__subtitle {
+        font-size: 14px;
+    }
+
+    .hero__description {
+        font-size: 14px;
+    }
+}
+
+/* Tablet Styles */
+@media (max-width: 768px) {
+    .navbar__menu {
+        gap: 20px;
+    }
+    
+    .hero__title {
+        font-size: 30px;
+    }
+}
