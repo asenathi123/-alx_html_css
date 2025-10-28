@@ -1,12 +1,26 @@
-# Assets Required
+# Headphones - ALX HTML/CSS Project
 
-Please download and place these files in the appropriate folders:
+A responsive headphones landing page implemented from scratch without any external libraries or frameworks.
 
-## Images (assets/images/)
-- logo_headphones.png
-- headphones_hero_1.jpg
+## Project Overview
+This project involves building a fully functional, responsive web page for a headphones company based on a provided design. The implementation follows modern web standards and best practices for HTML, CSS, accessibility, and responsive design.
 
-## Icons (assets/icons/)
-- holberton_school-icon fonts (from provided zip file)
+## Design Specifications
+- **Designer**: Nicolas Philippot, UI/UX designer
+- **Design File**: [Figma Project](https://www.figma.com/file/TwFqqWGYvNYvxZx2Qc0Uvh/Headphones?node-id=0%3A1)
+- **Final Screens**: Available in the Figma file
 
-The images can be extracted from the images_.zip file provided in the project requirements.
+## Requirements
+- No external CSS frameworks (Bootstrap, etc.)
+- No JavaScript (except for hamburger menu in task 8)
+- Fully responsive design
+- Mobile breakpoint: 480px or less
+- Max content width: 1000px centered
+- Hover/active states for links: #FF6565
+- Hover/active states for buttons: opacity: 0.9
+
+## Fonts
+- **Primary**: Source Sans Pro
+- **Secondary**: Spin Cycle OT
+
+## Project Structure
