@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Headphones - ALX HTML/CSS Project
 
 A responsive headphones landing page implemented from scratch without any external libraries or frameworks.
@@ -24,3 +25,6 @@ This project involves building a fully functional, responsive web page for a hea
 - **Secondary**: Spin Cycle OT
 
 ## Project Structure
+=======
+# alx_html_css
+>>>>>>> ad238c8f668f8695bc9a1c98b6aba8ee6d4cac9b
