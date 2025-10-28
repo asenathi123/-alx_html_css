@@ -1,0 +1,351 @@
+/* CSS Reset & Variables */
+:root {
+    --color-primary: #FF6565;
+    --color-white: #FFFFFF;
+    --color-black: #071629;
+    --color-gray: #979797;
+    --font-primary: 'Source Sans Pro', sans-serif;
+    --container-max-width: 1000px;
+    --border-radius: 22px;
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-primary);
+    line-height: 1.6;
+    color: var(--color-white);
+    overflow-x: hidden;
+}
+
+/* Container */
+.container {
+    max-width: var(--container-max-width);
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 28px 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar__logo img {
+    display: block;
+}
+
+.navbar__menu {
+    display: flex;
+    list-style: none;
+    gap: 41px;
+}
+
+.navbar__link {
+    text-decoration: none;
+    color: var(--color-white);
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: lowercase;
+    transition: var(--transition);
+}
+
+.navbar__link:hover,
+.navbar__link:active {
+    color: var(--color-primary);
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(rgba(7, 22, 41, 0.9), rgba(7, 22, 41, 0.9)), 
+                url('assets/images/headphones_hero_1.jpg') no-repeat center center;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding: 120px 0 80px;
+}
+
+.hero__content {
+    max-width: 637px;
+    margin: 0 auto;
+}
+
+.hero__title {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 0;
+}
+
+.hero__subtitle {
+    font-size: 16px;
+    font-weight: 700;
+    margin: 0 0 40px 0;
+}
+
+.btn {
+    border: none;
+    border-radius: var(--border-radius);
+    padding: 13px 31px;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: var(--transition);
+    font-family: inherit;
+}
+
+.btn--primary {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    margin-bottom: 65px;
+}
+
+.btn--primary:hover,
+.btn--primary:active {
+    opacity: 0.9;
+}
+
+.hero__description {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.6;
+    max-width: 637px;
+    margin: 0 auto;
+}
+
+/* Mobile Styles */
+@media (max-width: 480px) {
+    .container {
+        padding: 0 25px;
+    }
+
+    .navbar {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .navbar__menu {
+        gap: 20px;
+    }
+
+    .hero__title {
+        font-size: 28px;
+    }
+
+    .hero__subtitle {
+        font-size: 14px;
+    }
+
+    .hero__description {
+        font-size: 14px;
+    }
+}
+
+/* Tablet Styles */
+@media (max-width: 768px) {
+    .navbar__menu {
+        gap: 20px;
+    }
+    
+    .hero__title {
+        font-size: 30px;
+    }
+}
+/* Add to existing CSS */
+
+/* What We Do Section */
+.what-we-do {
+    padding: 100px 0;
+    background-color: var(--color-white);
+    color: var(--color-black);
+    text-align: center;
+}
+
+.section-header {
+    max-width: 637px;
+    margin: 0 auto 100px;
+}
+
+.section-title {
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 40px;
+    color: var(--color-black);
+}
+
+.section-description {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.6;
+    color: var(--color-black);
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.service-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.service-icon {
+    font-size: 100px;
+    color: var(--color-primary);
+    margin-bottom: 20px;
+    display: block;
+}
+
+.service-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: var(--color-black);
+}
+
+.service-description {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.6;
+    color: var(--color-black);
+}
+
+/* Mobile Styles for What We Do */
+@media (max-width: 480px) {
+    .what-we-do {
+        padding: 50px 0;
+    }
+    
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 60px;
+    }
+    
+    .section-header {
+        margin-bottom: 60px;
+    }
+    
+    .section-title {
+        font-size: 28px;
+    }
+}
+
+/* Tablet Styles for What We Do */
+@media (max-width: 768px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 60px;
+    }
+}
+/* Add to existing CSS */
+
+/* Our Results Section */
+.our-results {
+    padding: 100px 0;
+    background: linear-gradient(rgba(7, 22, 41, 0.9), rgba(7, 22, 41, 0.9)), 
+                url('assets/images/headphones_hero_2.jpg') no-repeat center center;
+    background-size: cover;
+    color: var(--color-white);
+    text-align: center;
+}
+
+.our-results .section-header {
+    margin-bottom: 100px;
+}
+
+.our-results .section-title,
+.our-results .section-description {
+    color: var(--color-white);
+}
+
+.results-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.result-item {
+    display: flex;
+    justify-content: center;
+}
+
+.result-pentagon {
+    position: relative;
+    width: 190px;
+    height: 190px;
+    background: var(--color-primary);
+    clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.result-value {
+    font-size: 46px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.result-label {
+    font-size: 14px;
+    font-weight: 700;
+    display: block;
+    max-width: 120px;
+}
+
+/* Mobile Styles for Our Results */
+@media (max-width: 480px) {
+    .our-results {
+        padding: 50px 0;
+    }
+    
+    .results-grid {
+        grid-template-columns: 1fr;
+        gap: 60px;
+    }
+    
+    .our-results .section-header {
+        margin-bottom: 60px;
+    }
+}
+
+/* Tablet Styles for Our Results */
+@media (max-width: 768px) {
+    .results-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 60px;
+    }
+}
